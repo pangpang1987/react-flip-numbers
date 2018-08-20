@@ -80,11 +80,11 @@ export default class FlipNumber extends React.Component<PropTypes, StateTypes> {
       const animateDegree = numbers.findIndex(v => v === activeNumber) * rotateDegreePerNumber;
 
       return {
-        ...(activeNumber === 0
-          ? {
-            rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
-          }
-          : null),
+        // ...(activeNumber === 0
+        //   ? {
+        //     rotateCounter: rotateCounter > resetRouteCounter ? 0 : rotateCounter + 1,
+        //   }
+        //   : null),
         degree: (rotateCounter * revolutionDegrees) - animateDegree,
       };
     }, this.makeStatic);
